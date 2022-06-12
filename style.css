@@ -1,0 +1,34 @@
+.container{
+    display: flex;
+}
+.Campo{
+    width: 200px;
+    height: 400px;
+    background-color: gray;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.Campo div{
+    width: 20px;
+    height: 20px;
+    
+}
+
+.Pecas{
+    background-color: blue;
+}
+
+.previa_peca{
+    margin-left: 50px;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: goldenrod;
+}
+
+.previa_peca div{
+    width: 20px;
+    height: 20px;
+}
