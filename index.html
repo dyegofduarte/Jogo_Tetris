@@ -6,9 +6,11 @@
     <link rel="stylesheet" href="style.css"></link>
     <title>Projeto CPWII - Tetris</title>
 </head>
-    <body>
+    <body onload="carrega_placar()">
+        <h1 align="center"> TRABALHO FINAL PARTE 2 </h1>
+        <h2>Jogador: <span id="jogador"></span></h2>
         <h3>Pontos: <span id="pontos">0</span></h3>
-        <button id="botao_inicio">Inicio/Pausa</button>
+        
         <div class="container">
             <div class="Campo">
                 <div></div>
@@ -223,8 +225,6 @@
                 <div class="ocupada"></div>
             </div>
 
-
-
             <div class="previa_peca">
                 <div></div>
                 <div></div>
@@ -243,9 +243,89 @@
                 <div></div>
                 <div></div>
             </div>
+            
+            <div class="controles">
+                <h2 align="center" font="arial bold">CONTROLES</h2>
+                <table align="center">
+                    <tr>
+                        <td><button id="botao_inicio">Inicio/Pausa</button></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <select id="seletorVelocidade">
+                                <option selected value="n1">Velocidade 1</option>
+                                <option value="n2">Velocidade 2</option>
+                                <option value="n3">Velocidade 3</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><button id="reiniciar">Reiniciar Jogo</button></td>
+                    </tr>
+                    <tr>
+                        <td><button id="finalizar">Finalizar Jogo</button></td>
+                    </tr>
+                    <tr>
+                        <td><button id="zerarPlacar">Zerar Placar</button></td>
+                    </tr>
+                    <tr>
+                        <td><button id="abreInstrucoes">Instruções</button></td>
+                        
+                    </tr>
+                </table>
+            </div>
+            
+            <div class="placar">
+                <h2 align="center" font="arial bold">PLACAR</h2>
+                <h1>Primeiro Lugar: <span id="primeiro_l"> </span> </h1>
+                <h1>Pontos: <span id="primeiro_p">0</span> </h1>
+                <br><hr>
+                
+                <h2>Segundo Lugar: <span id="segundo_l"> </span> </h2>
+                <h2>Pontos: <span id="segundo_p">0</span> </h2>
+                <br><hr>
+    
+                <h3>Terceiro Lugar: <span id="terceiro_l"> </span> </h3>
+                <h3>Pontos: <span id="terceiro_p">0</span> </h3>
+                <br>
+            </div>
+            
         </div>
 
-        <h1> ---- </h1>
-        <a href="https://www.youtube.com/watch?v=w1JJfK09ujQ">VIDEO</a>
+        
+        <div class="modal-container ">
+            <div class="modal">
+                <h1>Instruções</h1>
+                <hr>
+                <span>
+                    <h3>Setas do teclado: </h3><br>
+                    &nbsp; <b> Direita </b> = Move peça para direita <br>
+                    &nbsp; <b> Esquerda </b> = Move peça para esquerda <br>
+                    &nbsp; <b> Cima </b> = Faz Rotação da peça <br>
+                    &nbsp; <b> Baixo </b> = Acelera a descida da peça <br>
+                    <br>
+                    <h3>Botões: </h3><br>
+                    &nbsp; <b> Inici/Pausa </b> = Inicia e pausa o jogo <br>
+                    &nbsp; <b> Velocidade </b> = Seletor de velocida alterna entre 3 niveis <br>
+                    &nbsp; <b> Reiniciar Jogo </b> = Reinicia o jogo perdendo toda pontuação obtida<br>
+                    &nbsp; <b> Finalizar Jogo </b> = Finaliza o Jogo e mantem a pontuação obtida <br>
+                    &nbsp; <b> Zerar Placar </b> = Zera o placar do localStorage <br>
+                    &nbsp; <b> Instruções </b> = Chama este menu <br>
+                </span>
+                <hr>
+                <button id="fechaInstrucoes">Fechar</button>
+            </div>
+
+        </div>
+
+            <br><br><br><br>
+            
+            <div class="container_sobre">
+                
+                <button onclick="window.open ('sobre.html','popup','width=500,height=500,left=300,top=200');">Sobre</button>
+                <p><b>Desenvolvido por Diego Ferreira Duarte</b></p>
+            </div>
+
+        
     </body>
 </html>

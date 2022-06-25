@@ -1,10 +1,15 @@
+body{
+    /*background-color: azure;*/
+    background-image: linear-gradient(rgb(104, 102, 102), azure);
+}
 .container{
     display: flex;
+    
 }
 .Campo{
     width: 200px;
     height: 400px;
-    background-color: gray;
+    background-color: rgb(104, 102, 102);
     display: flex;
     flex-wrap: wrap;
 }
@@ -12,7 +17,6 @@
 .Campo div{
     width: 20px;
     height: 20px;
-    
 }
 
 .Pecas{
@@ -25,10 +29,137 @@
     height: 80px;
     display: flex;
     flex-wrap: wrap;
-    background-color: goldenrod;
+    background-color: rgb(163, 156, 156);
+    
 }
 
 .previa_peca div{
     width: 20px;
     height: 20px;
+}
+
+.controles{
+    width: 200px;
+    height: 300px;
+    margin-left: 50px;
+    margin-right: 50px;
+    background-color: rgb(41, 113, 161);
+    border-radius: 10px;
+    border-style: inset;
+    padding: 10px;
+}
+
+.controles button{
+    width: 110px;
+    
+}
+
+.controles select{
+    width: 110px;
+    
+}
+
+.placar{
+    width: 500px;
+    height: 450px;
+    background-color: gold;
+    border-radius: 10px;
+    border-style: outset;
+    padding: 10px;
+}
+
+
+
+
+
+/* MODAL POPUP DE INSTRUÇÕES*/
+
+.modal-container {
+    width: 50vw;
+    position: fixed;
+    top: 30px;
+    display: none;
+    z-index: 999;
+    justify-content: center;
+  }
+  
+  .modal {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    background-color: rgb(206, 202, 202);
+    border-radius: 10px;
+    width: 50%;
+  }
+
+.active{
+    display: flex;
+}
+
+.active .modal{
+    animation: modal .4s;
+}
+
+
+@keyframes modal{
+    from{
+        opacity: 0;
+        transform: translate3d(0, -60px, 0);
+    }
+    to{
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.modal-container span{
+    margin: 10px auto;
+}
+
+.modal-container button{
+    background-color: red;
+    
+    width: fit-content;
+    align-self: center;
+    border-radius: 5px;
+}
+
+/*
+@media (max-width: 500px) {
+    .modal{
+        padding: 10px;
+        width: 80%;
+    }
+    .modal-container span button{
+        font-size: smaller;
+    }
+    
+}
+*/
+
+.modal-container h1{
+    text-align: center;
+}
+
+
+/* SOBRE */
+
+.container_sobre{
+    width: 100%;
+    text-align: center;
+    bottom: 0;
+    
+}
+
+
+.sobre{
+    width: 450px;
+    height: 480px;
+    background: #6C7A89;
+    display:inline-block;
+    align-items: center;
+}
+
+.sobre button{
+    align-content: center;
 }
